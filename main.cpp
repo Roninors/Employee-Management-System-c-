@@ -1,12 +1,12 @@
 #include <iostream>
-using namespace std;
 #include "FunctionClass.h"
 #include "UserClass.h"
 
 int main()
 
 {
-    UserClass empArr[50];
+    UserClass *empArr = new UserClass[50];
+
     std::string operationDecider;
     int size = 50;
     FunctionClass functionClass;

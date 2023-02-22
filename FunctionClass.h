@@ -78,9 +78,26 @@ public:
             std::cout << "\n==================================================\n";
         }
     };
-
+    // to be developed
     void removeUser(UserClass empArr[], int size)
     {
-        std::cout << "remove users function";
+        std::string removeChosenEmp;
+        std::cout << "Enter the name of the employee you want to remove: ";
+        std::cin.ignore();
+        getline(std::cin, removeChosenEmp);
+
+        for (int i = 0; i < size; i++)
+        {
+
+            if (empArr[i].getName() == removeChosenEmp)
+            {
+                delete &empArr[i];
+                break;
+            }
+            else
+            {
+                std::cout << "Not found";
+            }
+        };
     };
 };
